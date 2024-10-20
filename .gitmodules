@@ -1,0 +1,3 @@
+[submodule "lego-release"]
+	path = lego-release
+	url = git@gitee.com:xhector/lego-release.git

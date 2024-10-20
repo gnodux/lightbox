@@ -1,0 +1,6 @@
+export {
+    dispatch:func(controller,action,request,response){
+        c:=import(controller)
+        c[action](request,response)
+    }
+}

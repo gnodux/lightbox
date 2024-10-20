@@ -1,0 +1,95 @@
+sys:=import("sys")
+enum:=import("enum")
+log:=import("log")
+database:=import("database")
+cron:=import("cron")
+http:=import("http")
+
+//使用数据，有序初始化
+_bootloader:=[
+    {
+        name:"databasse",
+        init:func(){
+            if is_undefined(sys.prop("database")){
+                log.info("no database found,skipped")
+                return
+            }
+            enum.each(
+                sys.require(sys.prop("database")),
+                func(k,v){
+                    log.infof("initialize database:%s",k)
+                    d:=sys.require(database.open(k,v.driver,v.dsn))
+                    if v.max_open{
+                        d.set_max_open(v.max_open)
+                    }
+                }
+            )
+        }
+    },{
+        name:"cron service",
+        init:func(){
+            if is_undefined(sys.prop("cron")){
+                log.info("no cron config,skiped")
+                return
+            }
+            cron_config:=sys.require(sys.prop("cron"))
+            if cron_config.storage {
+                log.infof("cron storage:%s",cron_config.storage)
+                cron.set_data_dir(cron_config.storage)
+            }
+            cron_srv:=undefined
+            if is_undefined(cron_config.name){
+                log.info("use default cron configuration")
+                cron_srv=cron.boot()
+            }else{
+                log.info("use user defined cron configuration",cron_config.name)
+                cron_srv=sys.must(cron.new({name:cron_config.name}))
+            }
+            if is_undefined(cron_srv){
+                sys.exit()
+            }
+            log.info("start cron service")
+            cron_srv.start()
+        }
+    },{
+        name:"http server",
+        init:func(){
+            if is_undefined(sys.prop("http")){
+                log.info("no http server config,skipped")
+                return
+            }
+            http_cfg:=sys.require(sys.prop("http"))
+            http_server:=sys.require(http.server({addr:http_cfg.addr}))
+            enum.each(
+                http_cfg.handlers,
+                func(k,v){
+                    log.infof("listen script %s:%s",k,v)
+                    http_server.handle(k,v)
+                }
+            )
+            enum.each(
+                http_cfg.static,
+                func(k,v){
+                    log.infof("listen static %s: %s",k,v)
+                    http_server.handle_static(k,v)
+                }
+            )
+            http_server.start()
+
+        }
+    }
+]
+export{
+    run:func(){
+        enum.each(_bootloader,func(idx,f){
+            log.infof("%s:bootstrap %s",idx+1,f.name)
+            f.init()
+        })
+    },
+    register:func(name,f){
+        _bootloader=append(_bootloader,{
+            "name":name,
+            "init":f
+        })
+    }
+}

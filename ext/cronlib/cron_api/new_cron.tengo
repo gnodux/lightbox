@@ -1,0 +1,5 @@
+cron=import("cron")
+json=import("json")
+data:=json.decode(request.body())
+cron.new(data)
+response.json(json.encode({code:200,message:"OK"}))

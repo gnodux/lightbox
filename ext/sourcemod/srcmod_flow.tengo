@@ -1,0 +1,105 @@
+
+text:=import("text")
+export {
+    switch:func(condition,fmap){
+        if is_undefined(condition){
+            condition="undefined"
+        }
+        f:=fmap[condition]
+        if f{
+            if is_function(f){
+                return f()
+            }else{
+                return f
+            }
+        }
+        f=fmap["default"]
+        if f{
+            if is_function(f){
+                return f()
+            }else{
+                return f
+            }
+        }
+    },
+    match:func(txt,fnMap){
+        for k,v in fnMap{
+            if text.re_match(k,txt) && is_function(v){
+                return v()
+            }
+        }
+    },
+    batch:func(fnList){
+        for fn in fnList{
+            fn()
+        }
+    },
+    stream:func(input,fnList){
+        result:=input
+        for fn in fnList{
+            result=fn(result)
+            if is_error(result){
+                return result
+            }
+        }
+        return result
+    },
+    each:func(data,fn){
+        for l in data{
+            fn(l)
+        }
+    },
+    //snippet:name=flow.ever;prefix=ever;body=ever(${input},${funcList});desc=call ever function from fnList with argument input;
+    ever:func(input,fnList){
+        result:=[]
+        for fn in fnList{
+            if is_callable(fn){
+                r:=fn(input)
+                if is_error(r){
+                    return r
+                }else{
+                    result=append(result,r)
+                }
+            }
+        }
+        return result
+    },
+    //snippet:name=flow.map;prefix=map;body=map(${fn},${list});desc=map表示对一个列表（List）中的每个元素做计算;
+    map:func(fn,list){
+        if is_array(list)|| is_immutable_array(list){
+            result:=[]
+            for l in list{
+                r:=fn(l)
+                if is_error(r){
+                    return r
+                }else{
+                    result=append(result,r)
+                }
+            }
+            return result
+        }else if is_map(list)||is_immutable_map(list){
+            result:={}
+            for k,v in list{
+                r:=fn(k,v)
+                if is_error(r){
+                    return r   
+                }else{
+                    result[k]=r
+                }
+            }
+            return result
+        }
+        return undefined
+    },
+    //snippet:name=flow.reduce;prefix=reduce;body=reduce(${fn},${list});desc=reduce表示对一个列表中的每个元素做迭代计算;
+    reduce:func(fn,list){
+        if len(list)<=0{
+            return undefined
+        }
+        last:=list[0]
+        for i:=1;i<len(list);i++{
+            last=fn(last,list[i])
+        }
+        return last
+    }
+}

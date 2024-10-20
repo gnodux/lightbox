@@ -1,0 +1,5 @@
+cron:=import("cron")
+json:=import("json")
+cron_instance:=cron.get(var.name)
+schedule_info:=json.decode(request.body())
+cron_instance.schedule(schedule_info)

@@ -1,0 +1,3006 @@
+{
+  "append": {
+    "prefix": [
+      "append"
+    ],
+    "body": "append($1)",
+    "description": "append"
+  },
+  "badger.del": {
+    "prefix": [
+      "del"
+    ],
+    "body": "del([${1:strings}])"
+  },
+  "badger.get": {
+    "prefix": [
+      "get"
+    ],
+    "body": "get(${1:key})"
+  },
+  "badger.get([string,string,...])": {
+    "prefix": [
+      "get"
+    ],
+    "body": "get([$1])"
+  },
+  "badger.open": {
+    "prefix": [
+      "open"
+    ],
+    "body": "open(${1:name},${2:dir})",
+    "description": "open a badger database"
+  },
+  "badger.open()": {
+    "prefix": [
+      "open"
+    ],
+    "body": "open()",
+    "description": "get default badger database"
+  },
+  "badger.open(name)": {
+    "prefix": [
+      "open"
+    ],
+    "body": "open($1)",
+    "description": "open a exists badger database"
+  },
+  "badger.search": {
+    "prefix": [
+      "search"
+    ],
+    "body": "search(${1:prefix})"
+  },
+  "badger.set": {
+    "prefix": [
+      "set"
+    ],
+    "body": "set({$1})"
+  },
+  "badger:=import(\"badger\")": {
+    "prefix": [
+      "badger"
+    ],
+    "body": "badger:=import(\"badger\")",
+    "description": "import module badger"
+  },
+  "base64.decode": {
+    "prefix": [
+      "decode"
+    ],
+    "body": "decode($1)",
+    "description": "decode in module base64"
+  },
+  "base64.encode": {
+    "prefix": [
+      "encode"
+    ],
+    "body": "encode($1)",
+    "description": "encode in module base64"
+  },
+  "base64.raw_decode": {
+    "prefix": [
+      "raw_decode"
+    ],
+    "body": "raw_decode($1)",
+    "description": "raw_decode in module base64"
+  },
+  "base64.raw_encode": {
+    "prefix": [
+      "raw_encode"
+    ],
+    "body": "raw_encode($1)",
+    "description": "raw_encode in module base64"
+  },
+  "base64.raw_url_decode": {
+    "prefix": [
+      "raw_url_decode"
+    ],
+    "body": "raw_url_decode($1)",
+    "description": "raw_url_decode in module base64"
+  },
+  "base64.raw_url_encode": {
+    "prefix": [
+      "raw_url_encode"
+    ],
+    "body": "raw_url_encode($1)",
+    "description": "raw_url_encode in module base64"
+  },
+  "base64.url_decode": {
+    "prefix": [
+      "url_decode"
+    ],
+    "body": "url_decode($1)",
+    "description": "url_decode in module base64"
+  },
+  "base64.url_encode": {
+    "prefix": [
+      "url_encode"
+    ],
+    "body": "url_encode($1)",
+    "description": "url_encode in module base64"
+  },
+  "base64:=import(\"base64\")": {
+    "prefix": [
+      "base64"
+    ],
+    "body": "base64:=import(\"base64\")",
+    "description": "import module base64"
+  },
+  "bool": {
+    "prefix": [
+      "bool"
+    ],
+    "body": "bool($1)",
+    "description": "bool"
+  },
+  "bucket.del(...keys)": {
+    "prefix": [
+      "del"
+    ],
+    "body": "del($1)"
+  },
+  "bucket.download": {
+    "prefix": [
+      "download"
+    ],
+    "body": "download(${1:key},${2:localfile})"
+  },
+  "bucket.get(key)": {
+    "prefix": [
+      "get"
+    ],
+    "body": "get($1)"
+  },
+  "bucket.get_meta(key)": {
+    "prefix": [
+      "get_meta"
+    ],
+    "body": "get_meta($1)"
+  },
+  "bucket.list({prefix:...,max:...})": {
+    "prefix": [
+      "list"
+    ],
+    "body": "list({$1})"
+  },
+  "bucket.put": {
+    "prefix": [
+      "put"
+    ],
+    "body": "put(${1:key},${2:body})"
+  },
+  "bytes": {
+    "prefix": [
+      "bytes"
+    ],
+    "body": "bytes($1)",
+    "description": "bytes"
+  },
+  "canal.new": {
+    "prefix": [
+      "canal.new",
+      "new"
+    ],
+    "body": "canal.new($1)",
+    "description": "new in module canal"
+  },
+  "canal.new_config": {
+    "prefix": [
+      "canal.new_config",
+      "new_config"
+    ],
+    "body": "canal.new_config($1)",
+    "description": "new_config in module canal"
+  },
+  "canal:=import(\"canal\")": {
+    "prefix": [
+      "canal"
+    ],
+    "body": "canal:=import(\"canal\")",
+    "description": "import module canal"
+  },
+  "char": {
+    "prefix": [
+      "char"
+    ],
+    "body": "char($1)",
+    "description": "char"
+  },
+  "copy": {
+    "prefix": [
+      "copy"
+    ],
+    "body": "copy($1)",
+    "description": "copy"
+  },
+  "cron.boot": {
+    "prefix": [
+      "boot"
+    ],
+    "body": "boot()",
+    "description": "boot in module cron"
+  },
+  "cron.get": {
+    "prefix": [
+      "get"
+    ],
+    "body": "get(${1:servicename})",
+    "description": "get in module cron"
+  },
+  "cron.new": {
+    "prefix": [
+      "new"
+    ],
+    "body": "new({db_name:${db_name}})",
+    "description": "new in module cron"
+  },
+  "cron.set_data_dir": {
+    "prefix": [
+      "set_data_dir"
+    ],
+    "body": "set_data_dir(${1:dir})",
+    "description": "set_data_dir in module cron"
+  },
+  "cron:=import(\"cron\")": {
+    "prefix": [
+      "cron"
+    ],
+    "body": "cron:=import(\"cron\")",
+    "description": "import module cron"
+  },
+  "database.close": {
+    "prefix": [
+      "close"
+    ],
+    "body": "close()",
+    "description": "close database connection"
+  },
+  "database.exec": {
+    "prefix": [
+      "exec"
+    ],
+    "body": "exec(${1:sql},{${2:map}})"
+  },
+  "database.exec(sql)": {
+    "prefix": [
+      "exec"
+    ],
+    "body": "exec(${1:sql})"
+  },
+  "database.exec_file": {
+    "prefix": [
+      "exec_file"
+    ],
+    "body": "exec_file($1)",
+    "description": "exec sql file(multiline)"
+  },
+  "database.open": {
+    "prefix": [
+      "open"
+    ],
+    "body": "open(${1:name},${2:driver},${3:dsn})",
+    "description": "open in module database"
+  },
+  "database.open(driver,dsn)": {
+    "prefix": [
+      "open"
+    ],
+    "body": "open(${1:driver},${2:dsn})"
+  },
+  "database.open(name)": {
+    "prefix": [
+      "open"
+    ],
+    "body": "open(${1:name})"
+  },
+  "database.query_first": {
+    "prefix": [
+      "query"
+    ],
+    "body": "query_first(${1:sql},{${2:map}})",
+    "description": "query and return first row"
+  },
+  "database.select": {
+    "prefix": [
+      "select"
+    ],
+    "body": "select(${1:sql},{${2:map}})",
+    "description": "query and map array(No case)"
+  },
+  "database.select_first": {
+    "prefix": [
+      "select_first"
+    ],
+    "body": "select_first(${1:sql},{${2:map}})",
+    "description": "query and map array(No case)"
+  },
+  "database.selectx": {
+    "prefix": [
+      "selectx"
+    ],
+    "body": "select(${1:sql},{${2:map}})",
+    "description": "query and map array(Camel case)"
+  },
+  "database.selectx_first": {
+    "prefix": [
+      "selectx_first"
+    ],
+    "body": "select_first(${1:sql},{${2:map}})"
+  },
+  "database.set_max_idle": {
+    "prefix": [
+      "set_max_idle"
+    ],
+    "body": "set_max_idle(${1:number})",
+    "description": "set max idle connection"
+  },
+  "database.set_max_idle_time": {
+    "prefix": [
+      "set_max_idle_time"
+    ],
+    "body": "set_max_idle_time(${1:duration})",
+    "description": "set max idle time"
+  },
+  "database.set_max_life_time": {
+    "prefix": [
+      "set_max_life_time"
+    ],
+    "body": "set_max_life(${1:duration})",
+    "description": "set max lifetime"
+  },
+  "database.set_max_open": {
+    "prefix": [
+      "set_max_open"
+    ],
+    "body": "set_max_open(${1:number})",
+    "description": "set max open connection"
+  },
+  "database:=import(\"database\")": {
+    "prefix": [
+      "database"
+    ],
+    "body": "database:=import(\"database\")",
+    "description": "import module database"
+  },
+  "delete": {
+    "prefix": [
+      "delete"
+    ],
+    "body": "delete($1)",
+    "description": "delete"
+  },
+  "env.get": {
+    "prefix": [
+      "env.get",
+      "get"
+    ],
+    "body": "env.get($1)",
+    "description": "get in module env"
+  },
+  "env.set": {
+    "prefix": [
+      "env.set",
+      "set"
+    ],
+    "body": "env.set($1)",
+    "description": "set in module env"
+  },
+  "env:=import(\"env\")": {
+    "prefix": [
+      "env"
+    ],
+    "body": "env:=import(\"env\")",
+    "description": "import module env"
+  },
+  "filepath.abs": {
+    "prefix": [
+      "filepath.abs",
+      "abs"
+    ],
+    "body": "filepath.abs($1)",
+    "description": "abs in module filepath"
+  },
+  "filepath.base": {
+    "prefix": [
+      "filepath.base",
+      "base"
+    ],
+    "body": "filepath.base($1)",
+    "description": "base in module filepath"
+  },
+  "filepath.clean": {
+    "prefix": [
+      "filepath.clean",
+      "clean"
+    ],
+    "body": "filepath.clean($1)",
+    "description": "clean in module filepath"
+  },
+  "filepath.dir": {
+    "prefix": [
+      "filepath.dir",
+      "dir"
+    ],
+    "body": "filepath.dir($1)",
+    "description": "dir in module filepath"
+  },
+  "filepath.ext": {
+    "prefix": [
+      "filepath.ext",
+      "ext"
+    ],
+    "body": "filepath.ext($1)",
+    "description": "ext in module filepath"
+  },
+  "filepath.join": {
+    "prefix": [
+      "filepath.join",
+      "join"
+    ],
+    "body": "filepath.join($1)",
+    "description": "join in module filepath"
+  },
+  "filepath.match": {
+    "prefix": [
+      "filepath.match",
+      "match"
+    ],
+    "body": "filepath.match($1)",
+    "description": "match in module filepath"
+  },
+  "filepath.split": {
+    "prefix": [
+      "filepath.split",
+      "split"
+    ],
+    "body": "filepath.split($1)",
+    "description": "split in module filepath"
+  },
+  "filepath:=import(\"filepath\")": {
+    "prefix": [
+      "filepath"
+    ],
+    "body": "filepath:=import(\"filepath\")",
+    "description": "import module filepath"
+  },
+  "float": {
+    "prefix": [
+      "float"
+    ],
+    "body": "float($1)",
+    "description": "float"
+  },
+  "fmt.print": {
+    "prefix": [
+      "print"
+    ],
+    "body": "print($1)",
+    "description": "print in module fmt"
+  },
+  "fmt.printf": {
+    "prefix": [
+      "printf"
+    ],
+    "body": "printf($1)",
+    "description": "printf in module fmt"
+  },
+  "fmt.println": {
+    "prefix": [
+      "println"
+    ],
+    "body": "println($1)",
+    "description": "println in module fmt"
+  },
+  "fmt.sprintf": {
+    "prefix": [
+      "sprintf"
+    ],
+    "body": "sprintf($1)",
+    "description": "sprintf in module fmt"
+  },
+  "fmt:=import(\"fmt\")": {
+    "prefix": [
+      "fmt"
+    ],
+    "body": "fmt:=import(\"fmt\")",
+    "description": "import module fmt"
+  },
+  "format": {
+    "prefix": [
+      "format"
+    ],
+    "body": "format($1)",
+    "description": "format"
+  },
+  "handle_dir": {
+    "prefix": [
+      "handle_dir"
+    ],
+    "body": "handle_dir(${1:prefix,${2:dir}})"
+  },
+  "handle_script_dir": {
+    "prefix": [
+      "handle_script_dir"
+    ],
+    "body": ""
+  },
+  "hex.decode": {
+    "prefix": [
+      "decode"
+    ],
+    "body": "decode($1)",
+    "description": "decode in module hex"
+  },
+  "hex.encode": {
+    "prefix": [
+      "encode"
+    ],
+    "body": "encode($1)",
+    "description": "encode in module hex"
+  },
+  "hex:=import(\"hex\")": {
+    "prefix": [
+      "hex"
+    ],
+    "body": "hex:=import(\"hex\")",
+    "description": "import module hex"
+  },
+  "http.addr": {
+    "prefix": [
+      "addr"
+    ],
+    "body": "addr($1)"
+  },
+  "http.get": {
+    "prefix": [
+      "get"
+    ],
+    "body": "get(${1:url})",
+    "description": "get in module http"
+  },
+  "http.get({url:...,header:{}})": {
+    "prefix": [
+      "get"
+    ],
+    "body": "get({url:${1:url},header:{$2}})"
+  },
+  "http.post": {
+    "prefix": [
+      "get"
+    ],
+    "body": "get({url:${1:url},header:{$2},data:${3:data}})",
+    "description": "post in module http"
+  },
+  "http.request": {
+    "prefix": [
+      "http.request",
+      "request"
+    ],
+    "body": "http.request($1)",
+    "description": "request in module http"
+  },
+  "http.server": {
+    "prefix": [
+      "http.server",
+      "server"
+    ],
+    "body": "http.server($1)",
+    "description": "server in module http"
+  },
+  "http:=import(\"http\")": {
+    "prefix": [
+      "http"
+    ],
+    "body": "http:=import(\"http\")",
+    "description": "import module http"
+  },
+  "httpserver.cert": {
+    "prefix": [
+      "cert"
+    ],
+    "body": "cert($1)"
+  },
+  "httpserver.handle_ws": {
+    "prefix": [
+      "handle_ws"
+    ],
+    "body": "handle_ws(${1:route},${2:script})"
+  },
+  "httpserver.key": {
+    "prefix": [
+      "key"
+    ],
+    "body": "key($1)"
+  },
+  "httpserver.root": {
+    "prefix": [
+      "root"
+    ],
+    "body": "root($1)"
+  },
+  "httpserver.serve": {
+    "prefix": [
+      "serve"
+    ],
+    "body": "serve()",
+    "description": "启动http服务"
+  },
+  "httpserver.serve_tls": {
+    "prefix": [
+      "serve_tls"
+    ],
+    "body": "serve_tls()",
+    "description": "启动http服务并使用证书"
+  },
+  "httpserver.tpl": {
+    "prefix": [
+      "tpl"
+    ],
+    "body": "tpl($1)"
+  },
+  "httpserver.use": {
+    "prefix": [
+      "use"
+    ],
+    "body": "use(${1:middleware})"
+  },
+  "httpserver.use_cors": {
+    "prefix": [
+      "use_cors"
+    ],
+    "body": "use_cors()"
+  },
+  "int": {
+    "prefix": [
+      "int"
+    ],
+    "body": "int($1)",
+    "description": "int"
+  },
+  "is_array": {
+    "prefix": [
+      "is_array"
+    ],
+    "body": "is_array($1)",
+    "description": "is_array"
+  },
+  "is_bool": {
+    "prefix": [
+      "is_bool"
+    ],
+    "body": "is_bool($1)",
+    "description": "is_bool"
+  },
+  "is_bytes": {
+    "prefix": [
+      "is_bytes"
+    ],
+    "body": "is_bytes($1)",
+    "description": "is_bytes"
+  },
+  "is_callable": {
+    "prefix": [
+      "is_callable"
+    ],
+    "body": "is_callable($1)",
+    "description": "is_callable"
+  },
+  "is_char": {
+    "prefix": [
+      "is_char"
+    ],
+    "body": "is_char($1)",
+    "description": "is_char"
+  },
+  "is_error": {
+    "prefix": [
+      "is_error"
+    ],
+    "body": "is_error($1)",
+    "description": "is_error"
+  },
+  "is_float": {
+    "prefix": [
+      "is_float"
+    ],
+    "body": "is_float($1)",
+    "description": "is_float"
+  },
+  "is_function": {
+    "prefix": [
+      "is_function"
+    ],
+    "body": "is_function($1)",
+    "description": "is_function"
+  },
+  "is_immutable_array": {
+    "prefix": [
+      "is_immutable_array"
+    ],
+    "body": "is_immutable_array($1)",
+    "description": "is_immutable_array"
+  },
+  "is_immutable_map": {
+    "prefix": [
+      "is_immutable_map"
+    ],
+    "body": "is_immutable_map($1)",
+    "description": "is_immutable_map"
+  },
+  "is_int": {
+    "prefix": [
+      "is_int"
+    ],
+    "body": "is_int($1)",
+    "description": "is_int"
+  },
+  "is_iterable": {
+    "prefix": [
+      "is_iterable"
+    ],
+    "body": "is_iterable($1)",
+    "description": "is_iterable"
+  },
+  "is_map": {
+    "prefix": [
+      "is_map"
+    ],
+    "body": "is_map($1)",
+    "description": "is_map"
+  },
+  "is_string": {
+    "prefix": [
+      "is_string"
+    ],
+    "body": "is_string($1)",
+    "description": "is_string"
+  },
+  "is_time": {
+    "prefix": [
+      "is_time"
+    ],
+    "body": "is_time($1)",
+    "description": "is_time"
+  },
+  "is_undefined": {
+    "prefix": [
+      "is_undefined"
+    ],
+    "body": "is_undefined($1)",
+    "description": "is_undefined"
+  },
+  "json.decode": {
+    "prefix": [
+      "decode"
+    ],
+    "body": "decode($1)",
+    "description": "decode in module json"
+  },
+  "json.encode": {
+    "prefix": [
+      "encode"
+    ],
+    "body": "encode($1)",
+    "description": "encode in module json"
+  },
+  "json.html_escape": {
+    "prefix": [
+      "html_escape"
+    ],
+    "body": "html_escape($1)",
+    "description": "html_escape in module json"
+  },
+  "json.indent": {
+    "prefix": [
+      "indent"
+    ],
+    "body": "indent($1)",
+    "description": "indent in module json"
+  },
+  "json:=import(\"json\")": {
+    "prefix": [
+      "json"
+    ],
+    "body": "json:=import(\"json\")",
+    "description": "import module json"
+  },
+  "len": {
+    "prefix": [
+      "len"
+    ],
+    "body": "len($1)",
+    "description": "len"
+  },
+  "log.err": {
+    "prefix": [
+      "log.err",
+      "err"
+    ],
+    "body": "log.err($1)",
+    "description": "err in module log"
+  },
+  "log.errf": {
+    "prefix": [
+      "log.errf",
+      "errf"
+    ],
+    "body": "log.errf($1)",
+    "description": "errf in module log"
+  },
+  "log.errln": {
+    "prefix": [
+      "log.errln",
+      "errln"
+    ],
+    "body": "log.errln($1)",
+    "description": "errln in module log"
+  },
+  "log.errorf": {
+    "prefix": [
+      "log.errorf"
+    ],
+    "body": "log.errorf(${1:format},${2:arguments})"
+  },
+  "log.info": {
+    "prefix": [
+      "log.info",
+      "info"
+    ],
+    "body": "log.info($1)",
+    "description": "info in module log"
+  },
+  "log.infof": {
+    "prefix": [
+      "log.infof"
+    ],
+    "body": "log.infof(${1:format},${2:values})",
+    "description": "infof in module log"
+  },
+  "log.infoln": {
+    "prefix": [
+      "log.infoln",
+      "infoln"
+    ],
+    "body": "log.infoln($1)",
+    "description": "infoln in module log"
+  },
+  "log.warn": {
+    "prefix": [
+      "log.warn",
+      "warn"
+    ],
+    "body": "log.warn($1)",
+    "description": "warn in module log"
+  },
+  "log.warnf": {
+    "prefix": [
+      "log.warnf"
+    ],
+    "body": "log.warnf($1,$2)",
+    "description": "warnf in module log"
+  },
+  "log.warnln": {
+    "prefix": [
+      "log.warnln",
+      "warnln"
+    ],
+    "body": "log.warnln($1)",
+    "description": "warnln in module log"
+  },
+  "log:=import(\"log\")": {
+    "prefix": [
+      "log"
+    ],
+    "body": "log:=import(\"log\")",
+    "description": "import module log"
+  },
+  "math.abs": {
+    "prefix": [
+      "abs"
+    ],
+    "body": "abs($1)",
+    "description": "abs in module math"
+  },
+  "math.acos": {
+    "prefix": [
+      "acos"
+    ],
+    "body": "acos($1)",
+    "description": "acos in module math"
+  },
+  "math.acosh": {
+    "prefix": [
+      "acosh"
+    ],
+    "body": "acosh($1)",
+    "description": "acosh in module math"
+  },
+  "math.asin": {
+    "prefix": [
+      "asin"
+    ],
+    "body": "asin($1)",
+    "description": "asin in module math"
+  },
+  "math.asinh": {
+    "prefix": [
+      "asinh"
+    ],
+    "body": "asinh($1)",
+    "description": "asinh in module math"
+  },
+  "math.atan": {
+    "prefix": [
+      "atan"
+    ],
+    "body": "atan($1)",
+    "description": "atan in module math"
+  },
+  "math.atan2": {
+    "prefix": [
+      "atan2"
+    ],
+    "body": "atan2($1)",
+    "description": "atan2 in module math"
+  },
+  "math.atanh": {
+    "prefix": [
+      "atanh"
+    ],
+    "body": "atanh($1)",
+    "description": "atanh in module math"
+  },
+  "math.cbrt": {
+    "prefix": [
+      "cbrt"
+    ],
+    "body": "cbrt($1)",
+    "description": "cbrt in module math"
+  },
+  "math.ceil": {
+    "prefix": [
+      "ceil"
+    ],
+    "body": "ceil($1)",
+    "description": "ceil in module math"
+  },
+  "math.copysign": {
+    "prefix": [
+      "copysign"
+    ],
+    "body": "copysign($1)",
+    "description": "copysign in module math"
+  },
+  "math.cos": {
+    "prefix": [
+      "cos"
+    ],
+    "body": "cos($1)",
+    "description": "cos in module math"
+  },
+  "math.cosh": {
+    "prefix": [
+      "cosh"
+    ],
+    "body": "cosh($1)",
+    "description": "cosh in module math"
+  },
+  "math.dim": {
+    "prefix": [
+      "dim"
+    ],
+    "body": "dim($1)",
+    "description": "dim in module math"
+  },
+  "math.e": {
+    "prefix": [
+      "e"
+    ],
+    "body": "e",
+    "description": "e in module math"
+  },
+  "math.erf": {
+    "prefix": [
+      "erf"
+    ],
+    "body": "erf($1)",
+    "description": "erf in module math"
+  },
+  "math.erfc": {
+    "prefix": [
+      "erfc"
+    ],
+    "body": "erfc($1)",
+    "description": "erfc in module math"
+  },
+  "math.exp": {
+    "prefix": [
+      "exp"
+    ],
+    "body": "exp($1)",
+    "description": "exp in module math"
+  },
+  "math.exp2": {
+    "prefix": [
+      "exp2"
+    ],
+    "body": "exp2($1)",
+    "description": "exp2 in module math"
+  },
+  "math.expm1": {
+    "prefix": [
+      "expm1"
+    ],
+    "body": "expm1($1)",
+    "description": "expm1 in module math"
+  },
+  "math.floor": {
+    "prefix": [
+      "floor"
+    ],
+    "body": "floor($1)",
+    "description": "floor in module math"
+  },
+  "math.gamma": {
+    "prefix": [
+      "gamma"
+    ],
+    "body": "gamma($1)",
+    "description": "gamma in module math"
+  },
+  "math.hypot": {
+    "prefix": [
+      "hypot"
+    ],
+    "body": "hypot($1)",
+    "description": "hypot in module math"
+  },
+  "math.ilogb": {
+    "prefix": [
+      "ilogb"
+    ],
+    "body": "ilogb($1)",
+    "description": "ilogb in module math"
+  },
+  "math.inf": {
+    "prefix": [
+      "inf"
+    ],
+    "body": "inf($1)",
+    "description": "inf in module math"
+  },
+  "math.is_inf": {
+    "prefix": [
+      "is_inf"
+    ],
+    "body": "is_inf($1)",
+    "description": "is_inf in module math"
+  },
+  "math.is_nan": {
+    "prefix": [
+      "is_nan"
+    ],
+    "body": "is_nan($1)",
+    "description": "is_nan in module math"
+  },
+  "math.j0": {
+    "prefix": [
+      "j0"
+    ],
+    "body": "j0($1)",
+    "description": "j0 in module math"
+  },
+  "math.j1": {
+    "prefix": [
+      "j1"
+    ],
+    "body": "j1($1)",
+    "description": "j1 in module math"
+  },
+  "math.jn": {
+    "prefix": [
+      "jn"
+    ],
+    "body": "jn($1)",
+    "description": "jn in module math"
+  },
+  "math.ldexp": {
+    "prefix": [
+      "ldexp"
+    ],
+    "body": "ldexp($1)",
+    "description": "ldexp in module math"
+  },
+  "math.ln10": {
+    "prefix": [
+      "ln10"
+    ],
+    "body": "ln10",
+    "description": "ln10 in module math"
+  },
+  "math.ln2": {
+    "prefix": [
+      "ln2"
+    ],
+    "body": "ln2",
+    "description": "ln2 in module math"
+  },
+  "math.log": {
+    "prefix": [
+      "log"
+    ],
+    "body": "log($1)",
+    "description": "log in module math"
+  },
+  "math.log10": {
+    "prefix": [
+      "log10"
+    ],
+    "body": "log10($1)",
+    "description": "log10 in module math"
+  },
+  "math.log10E": {
+    "prefix": [
+      "log10E"
+    ],
+    "body": "log10E",
+    "description": "log10E in module math"
+  },
+  "math.log1p": {
+    "prefix": [
+      "log1p"
+    ],
+    "body": "log1p($1)",
+    "description": "log1p in module math"
+  },
+  "math.log2": {
+    "prefix": [
+      "log2"
+    ],
+    "body": "log2($1)",
+    "description": "log2 in module math"
+  },
+  "math.log2E": {
+    "prefix": [
+      "log2E"
+    ],
+    "body": "log2E",
+    "description": "log2E in module math"
+  },
+  "math.logb": {
+    "prefix": [
+      "logb"
+    ],
+    "body": "logb($1)",
+    "description": "logb in module math"
+  },
+  "math.max": {
+    "prefix": [
+      "max"
+    ],
+    "body": "max($1)",
+    "description": "max in module math"
+  },
+  "math.min": {
+    "prefix": [
+      "min"
+    ],
+    "body": "min($1)",
+    "description": "min in module math"
+  },
+  "math.mod": {
+    "prefix": [
+      "mod"
+    ],
+    "body": "mod($1)",
+    "description": "mod in module math"
+  },
+  "math.nan": {
+    "prefix": [
+      "nan"
+    ],
+    "body": "nan($1)",
+    "description": "nan in module math"
+  },
+  "math.nextafter": {
+    "prefix": [
+      "nextafter"
+    ],
+    "body": "nextafter($1)",
+    "description": "nextafter in module math"
+  },
+  "math.phi": {
+    "prefix": [
+      "phi"
+    ],
+    "body": "phi",
+    "description": "phi in module math"
+  },
+  "math.pi": {
+    "prefix": [
+      "pi"
+    ],
+    "body": "pi",
+    "description": "pi in module math"
+  },
+  "math.pow": {
+    "prefix": [
+      "pow"
+    ],
+    "body": "pow($1)",
+    "description": "pow in module math"
+  },
+  "math.pow10": {
+    "prefix": [
+      "pow10"
+    ],
+    "body": "pow10($1)",
+    "description": "pow10 in module math"
+  },
+  "math.remainder": {
+    "prefix": [
+      "remainder"
+    ],
+    "body": "remainder($1)",
+    "description": "remainder in module math"
+  },
+  "math.signbit": {
+    "prefix": [
+      "signbit"
+    ],
+    "body": "signbit($1)",
+    "description": "signbit in module math"
+  },
+  "math.sin": {
+    "prefix": [
+      "sin"
+    ],
+    "body": "sin($1)",
+    "description": "sin in module math"
+  },
+  "math.sinh": {
+    "prefix": [
+      "sinh"
+    ],
+    "body": "sinh($1)",
+    "description": "sinh in module math"
+  },
+  "math.sqrt": {
+    "prefix": [
+      "sqrt"
+    ],
+    "body": "sqrt($1)",
+    "description": "sqrt in module math"
+  },
+  "math.sqrt2": {
+    "prefix": [
+      "sqrt2"
+    ],
+    "body": "sqrt2",
+    "description": "sqrt2 in module math"
+  },
+  "math.sqrtE": {
+    "prefix": [
+      "sqrtE"
+    ],
+    "body": "sqrtE",
+    "description": "sqrtE in module math"
+  },
+  "math.sqrtPhi": {
+    "prefix": [
+      "sqrtPhi"
+    ],
+    "body": "sqrtPhi",
+    "description": "sqrtPhi in module math"
+  },
+  "math.sqrtPi": {
+    "prefix": [
+      "sqrtPi"
+    ],
+    "body": "sqrtPi",
+    "description": "sqrtPi in module math"
+  },
+  "math.tan": {
+    "prefix": [
+      "tan"
+    ],
+    "body": "tan($1)",
+    "description": "tan in module math"
+  },
+  "math.tanh": {
+    "prefix": [
+      "tanh"
+    ],
+    "body": "tanh($1)",
+    "description": "tanh in module math"
+  },
+  "math.trunc": {
+    "prefix": [
+      "trunc"
+    ],
+    "body": "trunc($1)",
+    "description": "trunc in module math"
+  },
+  "math.y0": {
+    "prefix": [
+      "y0"
+    ],
+    "body": "y0($1)",
+    "description": "y0 in module math"
+  },
+  "math.y1": {
+    "prefix": [
+      "y1"
+    ],
+    "body": "y1($1)",
+    "description": "y1 in module math"
+  },
+  "math.yn": {
+    "prefix": [
+      "yn"
+    ],
+    "body": "yn($1)",
+    "description": "yn in module math"
+  },
+  "math:=import(\"math\")": {
+    "prefix": [
+      "math"
+    ],
+    "body": "math:=import(\"math\")",
+    "description": "import module math"
+  },
+  "os.args": {
+    "prefix": [
+      "args"
+    ],
+    "body": "args($1)",
+    "description": "args in module os"
+  },
+  "os.chdir": {
+    "prefix": [
+      "chdir"
+    ],
+    "body": "chdir($1)",
+    "description": "chdir in module os"
+  },
+  "os.chmod": {
+    "prefix": [
+      "chmod"
+    ],
+    "body": "chmod($1)",
+    "description": "chmod in module os"
+  },
+  "os.chown": {
+    "prefix": [
+      "chown"
+    ],
+    "body": "chown($1)",
+    "description": "chown in module os"
+  },
+  "os.clearenv": {
+    "prefix": [
+      "clearenv"
+    ],
+    "body": "clearenv($1)",
+    "description": "clearenv in module os"
+  },
+  "os.create": {
+    "prefix": [
+      "create"
+    ],
+    "body": "create($1)",
+    "description": "create in module os"
+  },
+  "os.dev_null": {
+    "prefix": [
+      "dev_null"
+    ],
+    "body": "dev_null",
+    "description": "dev_null in module os"
+  },
+  "os.environ": {
+    "prefix": [
+      "environ"
+    ],
+    "body": "environ($1)",
+    "description": "environ in module os"
+  },
+  "os.exec": {
+    "prefix": [
+      "exec"
+    ],
+    "body": "exec($1)",
+    "description": "exec in module os"
+  },
+  "os.exec_look_path": {
+    "prefix": [
+      "exec_look_path"
+    ],
+    "body": "exec_look_path($1)",
+    "description": "exec_look_path in module os"
+  },
+  "os.exit": {
+    "prefix": [
+      "exit"
+    ],
+    "body": "exit($1)",
+    "description": "exit in module os"
+  },
+  "os.expand_env": {
+    "prefix": [
+      "expand_env"
+    ],
+    "body": "expand_env($1)",
+    "description": "expand_env in module os"
+  },
+  "os.find_process": {
+    "prefix": [
+      "find_process"
+    ],
+    "body": "find_process($1)",
+    "description": "find_process in module os"
+  },
+  "os.getegid": {
+    "prefix": [
+      "getegid"
+    ],
+    "body": "getegid($1)",
+    "description": "getegid in module os"
+  },
+  "os.getenv": {
+    "prefix": [
+      "getenv"
+    ],
+    "body": "getenv($1)",
+    "description": "getenv in module os"
+  },
+  "os.geteuid": {
+    "prefix": [
+      "geteuid"
+    ],
+    "body": "geteuid($1)",
+    "description": "geteuid in module os"
+  },
+  "os.getgid": {
+    "prefix": [
+      "getgid"
+    ],
+    "body": "getgid($1)",
+    "description": "getgid in module os"
+  },
+  "os.getgroups": {
+    "prefix": [
+      "getgroups"
+    ],
+    "body": "getgroups($1)",
+    "description": "getgroups in module os"
+  },
+  "os.getpagesize": {
+    "prefix": [
+      "getpagesize"
+    ],
+    "body": "getpagesize($1)",
+    "description": "getpagesize in module os"
+  },
+  "os.getpid": {
+    "prefix": [
+      "getpid"
+    ],
+    "body": "getpid($1)",
+    "description": "getpid in module os"
+  },
+  "os.getppid": {
+    "prefix": [
+      "getppid"
+    ],
+    "body": "getppid($1)",
+    "description": "getppid in module os"
+  },
+  "os.getuid": {
+    "prefix": [
+      "getuid"
+    ],
+    "body": "getuid($1)",
+    "description": "getuid in module os"
+  },
+  "os.getwd": {
+    "prefix": [
+      "getwd"
+    ],
+    "body": "getwd($1)",
+    "description": "getwd in module os"
+  },
+  "os.hostname": {
+    "prefix": [
+      "hostname"
+    ],
+    "body": "hostname($1)",
+    "description": "hostname in module os"
+  },
+  "os.lchown": {
+    "prefix": [
+      "lchown"
+    ],
+    "body": "lchown($1)",
+    "description": "lchown in module os"
+  },
+  "os.link": {
+    "prefix": [
+      "link"
+    ],
+    "body": "link($1)",
+    "description": "link in module os"
+  },
+  "os.lookup_env": {
+    "prefix": [
+      "lookup_env"
+    ],
+    "body": "lookup_env($1)",
+    "description": "lookup_env in module os"
+  },
+  "os.mkdir": {
+    "prefix": [
+      "mkdir"
+    ],
+    "body": "mkdir($1)",
+    "description": "mkdir in module os"
+  },
+  "os.mkdir_all": {
+    "prefix": [
+      "mkdir_all"
+    ],
+    "body": "mkdir_all($1)",
+    "description": "mkdir_all in module os"
+  },
+  "os.mode_append": {
+    "prefix": [
+      "mode_append"
+    ],
+    "body": "mode_append",
+    "description": "mode_append in module os"
+  },
+  "os.mode_char_device": {
+    "prefix": [
+      "mode_char_device"
+    ],
+    "body": "mode_char_device",
+    "description": "mode_char_device in module os"
+  },
+  "os.mode_device": {
+    "prefix": [
+      "mode_device"
+    ],
+    "body": "mode_device",
+    "description": "mode_device in module os"
+  },
+  "os.mode_dir": {
+    "prefix": [
+      "mode_dir"
+    ],
+    "body": "mode_dir",
+    "description": "mode_dir in module os"
+  },
+  "os.mode_exclusive": {
+    "prefix": [
+      "mode_exclusive"
+    ],
+    "body": "mode_exclusive",
+    "description": "mode_exclusive in module os"
+  },
+  "os.mode_named_pipe": {
+    "prefix": [
+      "mode_named_pipe"
+    ],
+    "body": "mode_named_pipe",
+    "description": "mode_named_pipe in module os"
+  },
+  "os.mode_perm": {
+    "prefix": [
+      "mode_perm"
+    ],
+    "body": "mode_perm",
+    "description": "mode_perm in module os"
+  },
+  "os.mode_setgui": {
+    "prefix": [
+      "mode_setgui"
+    ],
+    "body": "mode_setgui",
+    "description": "mode_setgui in module os"
+  },
+  "os.mode_setuid": {
+    "prefix": [
+      "mode_setuid"
+    ],
+    "body": "mode_setuid",
+    "description": "mode_setuid in module os"
+  },
+  "os.mode_socket": {
+    "prefix": [
+      "mode_socket"
+    ],
+    "body": "mode_socket",
+    "description": "mode_socket in module os"
+  },
+  "os.mode_sticky": {
+    "prefix": [
+      "mode_sticky"
+    ],
+    "body": "mode_sticky",
+    "description": "mode_sticky in module os"
+  },
+  "os.mode_symlink": {
+    "prefix": [
+      "mode_symlink"
+    ],
+    "body": "mode_symlink",
+    "description": "mode_symlink in module os"
+  },
+  "os.mode_temporary": {
+    "prefix": [
+      "mode_temporary"
+    ],
+    "body": "mode_temporary",
+    "description": "mode_temporary in module os"
+  },
+  "os.mode_type": {
+    "prefix": [
+      "mode_type"
+    ],
+    "body": "mode_type",
+    "description": "mode_type in module os"
+  },
+  "os.o_append": {
+    "prefix": [
+      "o_append"
+    ],
+    "body": "o_append",
+    "description": "o_append in module os"
+  },
+  "os.o_create": {
+    "prefix": [
+      "o_create"
+    ],
+    "body": "o_create",
+    "description": "o_create in module os"
+  },
+  "os.o_excl": {
+    "prefix": [
+      "o_excl"
+    ],
+    "body": "o_excl",
+    "description": "o_excl in module os"
+  },
+  "os.o_rdonly": {
+    "prefix": [
+      "o_rdonly"
+    ],
+    "body": "o_rdonly",
+    "description": "o_rdonly in module os"
+  },
+  "os.o_rdwr": {
+    "prefix": [
+      "o_rdwr"
+    ],
+    "body": "o_rdwr",
+    "description": "o_rdwr in module os"
+  },
+  "os.o_sync": {
+    "prefix": [
+      "o_sync"
+    ],
+    "body": "o_sync",
+    "description": "o_sync in module os"
+  },
+  "os.o_trunc": {
+    "prefix": [
+      "o_trunc"
+    ],
+    "body": "o_trunc",
+    "description": "o_trunc in module os"
+  },
+  "os.o_wronly": {
+    "prefix": [
+      "o_wronly"
+    ],
+    "body": "o_wronly",
+    "description": "o_wronly in module os"
+  },
+  "os.open": {
+    "prefix": [
+      "open"
+    ],
+    "body": "open($1)",
+    "description": "open in module os"
+  },
+  "os.open_file": {
+    "prefix": [
+      "open_file"
+    ],
+    "body": "open_file($1)",
+    "description": "open_file in module os"
+  },
+  "os.path_list_separator": {
+    "prefix": [
+      "path_list_separator"
+    ],
+    "body": "path_list_separator",
+    "description": "path_list_separator in module os"
+  },
+  "os.path_separator": {
+    "prefix": [
+      "path_separator"
+    ],
+    "body": "path_separator",
+    "description": "path_separator in module os"
+  },
+  "os.read_file": {
+    "prefix": [
+      "read_file"
+    ],
+    "body": "read_file($1)",
+    "description": "read_file in module os"
+  },
+  "os.readlink": {
+    "prefix": [
+      "readlink"
+    ],
+    "body": "readlink($1)",
+    "description": "readlink in module os"
+  },
+  "os.remove": {
+    "prefix": [
+      "remove"
+    ],
+    "body": "remove($1)",
+    "description": "remove in module os"
+  },
+  "os.remove_all": {
+    "prefix": [
+      "remove_all"
+    ],
+    "body": "remove_all($1)",
+    "description": "remove_all in module os"
+  },
+  "os.rename": {
+    "prefix": [
+      "rename"
+    ],
+    "body": "rename($1)",
+    "description": "rename in module os"
+  },
+  "os.seek_cur": {
+    "prefix": [
+      "seek_cur"
+    ],
+    "body": "seek_cur",
+    "description": "seek_cur in module os"
+  },
+  "os.seek_end": {
+    "prefix": [
+      "seek_end"
+    ],
+    "body": "seek_end",
+    "description": "seek_end in module os"
+  },
+  "os.seek_set": {
+    "prefix": [
+      "seek_set"
+    ],
+    "body": "seek_set",
+    "description": "seek_set in module os"
+  },
+  "os.setenv": {
+    "prefix": [
+      "setenv"
+    ],
+    "body": "setenv($1)",
+    "description": "setenv in module os"
+  },
+  "os.start_process": {
+    "prefix": [
+      "start_process"
+    ],
+    "body": "start_process($1)",
+    "description": "start_process in module os"
+  },
+  "os.stat": {
+    "prefix": [
+      "stat"
+    ],
+    "body": "stat($1)",
+    "description": "stat in module os"
+  },
+  "os.symlink": {
+    "prefix": [
+      "symlink"
+    ],
+    "body": "symlink($1)",
+    "description": "symlink in module os"
+  },
+  "os.temp_dir": {
+    "prefix": [
+      "temp_dir"
+    ],
+    "body": "temp_dir($1)",
+    "description": "temp_dir in module os"
+  },
+  "os.truncate": {
+    "prefix": [
+      "truncate"
+    ],
+    "body": "truncate($1)",
+    "description": "truncate in module os"
+  },
+  "os.unsetenv": {
+    "prefix": [
+      "unsetenv"
+    ],
+    "body": "unsetenv($1)",
+    "description": "unsetenv in module os"
+  },
+  "os:=import(\"os\")": {
+    "prefix": [
+      "os"
+    ],
+    "body": "os:=import(\"os\")",
+    "description": "import module os"
+  },
+  "oss.bucket": {
+    "prefix": [
+      "bucket"
+    ],
+    "body": "bucket(${1:bucketName})"
+  },
+  "oss.list": {
+    "prefix": [
+      "list"
+    ],
+    "body": "list()"
+  },
+  "oss.open": {
+    "prefix": [
+      "open"
+    ],
+    "body": "open(${1:endpoint},${2:accessKeyId},${3:accessSecret})",
+    "description": "open in module oss"
+  },
+  "oss:=import(\"oss\")": {
+    "prefix": [
+      "oss"
+    ],
+    "body": "oss:=import(\"oss\")",
+    "description": "import module oss"
+  },
+  "path.base": {
+    "prefix": [
+      "path.base",
+      "base"
+    ],
+    "body": "path.base($1)",
+    "description": "base in module path"
+  },
+  "path.clean": {
+    "prefix": [
+      "path.clean",
+      "clean"
+    ],
+    "body": "path.clean($1)",
+    "description": "clean in module path"
+  },
+  "path.dir": {
+    "prefix": [
+      "path.dir",
+      "dir"
+    ],
+    "body": "path.dir($1)",
+    "description": "dir in module path"
+  },
+  "path.ext": {
+    "prefix": [
+      "path.ext",
+      "ext"
+    ],
+    "body": "path.ext($1)",
+    "description": "ext in module path"
+  },
+  "path.is_abs": {
+    "prefix": [
+      "path.is_abs",
+      "is_abs"
+    ],
+    "body": "path.is_abs($1)",
+    "description": "is_abs in module path"
+  },
+  "path.join": {
+    "prefix": [
+      "path.join",
+      "join"
+    ],
+    "body": "path.join($1)",
+    "description": "join in module path"
+  },
+  "path.match": {
+    "prefix": [
+      "path.match",
+      "match"
+    ],
+    "body": "path.match($1)",
+    "description": "match in module path"
+  },
+  "path.split": {
+    "prefix": [
+      "path.split",
+      "split"
+    ],
+    "body": "path.split($1)",
+    "description": "split in module path"
+  },
+  "path:=import(\"path\")": {
+    "prefix": [
+      "path"
+    ],
+    "body": "path:=import(\"path\")",
+    "description": "import module path"
+  },
+  "query": {
+    "prefix": [
+      "query"
+    ],
+    "body": "query(${1:sql},{${2:map}})",
+    "description": "query and return row array"
+  },
+  "query(sql)": {
+    "prefix": [
+      "query"
+    ],
+    "body": "query(${1:sql})",
+    "description": "query and return a row array"
+  },
+  "rand.exp_float": {
+    "prefix": [
+      "exp_float"
+    ],
+    "body": "exp_float($1)",
+    "description": "exp_float in module rand"
+  },
+  "rand.float": {
+    "prefix": [
+      "float"
+    ],
+    "body": "float($1)",
+    "description": "float in module rand"
+  },
+  "rand.int": {
+    "prefix": [
+      "int"
+    ],
+    "body": "int($1)",
+    "description": "int in module rand"
+  },
+  "rand.intn": {
+    "prefix": [
+      "intn"
+    ],
+    "body": "intn($1)",
+    "description": "intn in module rand"
+  },
+  "rand.norm_float": {
+    "prefix": [
+      "norm_float"
+    ],
+    "body": "norm_float($1)",
+    "description": "norm_float in module rand"
+  },
+  "rand.perm": {
+    "prefix": [
+      "perm"
+    ],
+    "body": "perm($1)",
+    "description": "perm in module rand"
+  },
+  "rand.rand": {
+    "prefix": [
+      "rand"
+    ],
+    "body": "rand($1)",
+    "description": "rand in module rand"
+  },
+  "rand.read": {
+    "prefix": [
+      "read"
+    ],
+    "body": "read($1)",
+    "description": "read in module rand"
+  },
+  "rand.seed": {
+    "prefix": [
+      "seed"
+    ],
+    "body": "seed($1)",
+    "description": "seed in module rand"
+  },
+  "rand:=import(\"rand\")": {
+    "prefix": [
+      "rand"
+    ],
+    "body": "rand:=import(\"rand\")",
+    "description": "import module rand"
+  },
+  "range": {
+    "prefix": [
+      "range"
+    ],
+    "body": "range($1)",
+    "description": "range"
+  },
+  "smtp.attach": {
+    "prefix": [
+      "smtp.attach",
+      "attach"
+    ],
+    "body": "smtp.attach",
+    "description": "attach in module smtp"
+  },
+  "smtp.bcc": {
+    "prefix": [
+      "smtp.bcc",
+      "bcc"
+    ],
+    "body": "smtp.bcc",
+    "description": "bcc in module smtp"
+  },
+  "smtp.body": {
+    "prefix": [
+      "smtp.body",
+      "body"
+    ],
+    "body": "smtp.body",
+    "description": "body in module smtp"
+  },
+  "smtp.cc": {
+    "prefix": [
+      "smtp.cc",
+      "cc"
+    ],
+    "body": "smtp.cc",
+    "description": "cc in module smtp"
+  },
+  "smtp.dial": {
+    "prefix": [
+      "dial"
+    ],
+    "body": "dial(${1:host},${2:port},${3:username},${4:password})",
+    "description": "dial in module smtp"
+  },
+  "smtp.embed": {
+    "prefix": [
+      "smtp.embed",
+      "embed"
+    ],
+    "body": "smtp.embed",
+    "description": "embed in module smtp"
+  },
+  "smtp.from": {
+    "prefix": [
+      "smtp.from",
+      "from"
+    ],
+    "body": "smtp.from",
+    "description": "from in module smtp"
+  },
+  "smtp.replay_to": {
+    "prefix": [
+      "smtp.replay_to",
+      "replay_to"
+    ],
+    "body": "smtp.replay_to",
+    "description": "replay_to in module smtp"
+  },
+  "smtp.send": {
+    "prefix": [
+      "send"
+    ],
+    "body": "send({ from:$1, to:$2, cc:$3, bcc:$4, reply_to:$5,subject:$6,body:$7})"
+  },
+  "smtp.subject": {
+    "prefix": [
+      "smtp.subject",
+      "subject"
+    ],
+    "body": "smtp.subject",
+    "description": "subject in module smtp"
+  },
+  "smtp.to": {
+    "prefix": [
+      "smtp.to",
+      "to"
+    ],
+    "body": "smtp.to",
+    "description": "to in module smtp"
+  },
+  "smtp:=import(\"smtp\")": {
+    "prefix": [
+      "smtp"
+    ],
+    "body": "smtp:=import(\"smtp\")",
+    "description": "import module smtp"
+  },
+  "splice": {
+    "prefix": [
+      "splice"
+    ],
+    "body": "splice($1)",
+    "description": "splice"
+  },
+  "string": {
+    "prefix": [
+      "string"
+    ],
+    "body": "string($1)",
+    "description": "string"
+  },
+  "text.atoi": {
+    "prefix": [
+      "atoi"
+    ],
+    "body": "atoi($1)",
+    "description": "atoi in module text"
+  },
+  "text.compare": {
+    "prefix": [
+      "compare"
+    ],
+    "body": "compare($1)",
+    "description": "compare in module text"
+  },
+  "text.contains": {
+    "prefix": [
+      "contains"
+    ],
+    "body": "contains($1)",
+    "description": "contains in module text"
+  },
+  "text.contains_any": {
+    "prefix": [
+      "contains_any"
+    ],
+    "body": "contains_any($1)",
+    "description": "contains_any in module text"
+  },
+  "text.count": {
+    "prefix": [
+      "count"
+    ],
+    "body": "count($1)",
+    "description": "count in module text"
+  },
+  "text.equal_fold": {
+    "prefix": [
+      "equal_fold"
+    ],
+    "body": "equal_fold($1)",
+    "description": "equal_fold in module text"
+  },
+  "text.fields": {
+    "prefix": [
+      "fields"
+    ],
+    "body": "fields($1)",
+    "description": "fields in module text"
+  },
+  "text.format_bool": {
+    "prefix": [
+      "format_bool"
+    ],
+    "body": "format_bool($1)",
+    "description": "format_bool in module text"
+  },
+  "text.format_float": {
+    "prefix": [
+      "format_float"
+    ],
+    "body": "format_float($1)",
+    "description": "format_float in module text"
+  },
+  "text.format_int": {
+    "prefix": [
+      "format_int"
+    ],
+    "body": "format_int($1)",
+    "description": "format_int in module text"
+  },
+  "text.has_prefix": {
+    "prefix": [
+      "has_prefix"
+    ],
+    "body": "has_prefix($1)",
+    "description": "has_prefix in module text"
+  },
+  "text.has_suffix": {
+    "prefix": [
+      "has_suffix"
+    ],
+    "body": "has_suffix($1)",
+    "description": "has_suffix in module text"
+  },
+  "text.index": {
+    "prefix": [
+      "index"
+    ],
+    "body": "index($1)",
+    "description": "index in module text"
+  },
+  "text.index_any": {
+    "prefix": [
+      "index_any"
+    ],
+    "body": "index_any($1)",
+    "description": "index_any in module text"
+  },
+  "text.itoa": {
+    "prefix": [
+      "itoa"
+    ],
+    "body": "itoa($1)",
+    "description": "itoa in module text"
+  },
+  "text.join": {
+    "prefix": [
+      "join"
+    ],
+    "body": "join($1)",
+    "description": "join in module text"
+  },
+  "text.last_index": {
+    "prefix": [
+      "last_index"
+    ],
+    "body": "last_index($1)",
+    "description": "last_index in module text"
+  },
+  "text.last_index_any": {
+    "prefix": [
+      "last_index_any"
+    ],
+    "body": "last_index_any($1)",
+    "description": "last_index_any in module text"
+  },
+  "text.pad_left": {
+    "prefix": [
+      "pad_left"
+    ],
+    "body": "pad_left($1)",
+    "description": "pad_left in module text"
+  },
+  "text.pad_right": {
+    "prefix": [
+      "pad_right"
+    ],
+    "body": "pad_right($1)",
+    "description": "pad_right in module text"
+  },
+  "text.parse_bool": {
+    "prefix": [
+      "parse_bool"
+    ],
+    "body": "parse_bool($1)",
+    "description": "parse_bool in module text"
+  },
+  "text.parse_float": {
+    "prefix": [
+      "parse_float"
+    ],
+    "body": "parse_float($1)",
+    "description": "parse_float in module text"
+  },
+  "text.parse_int": {
+    "prefix": [
+      "parse_int"
+    ],
+    "body": "parse_int($1)",
+    "description": "parse_int in module text"
+  },
+  "text.quote": {
+    "prefix": [
+      "quote"
+    ],
+    "body": "quote($1)",
+    "description": "quote in module text"
+  },
+  "text.re_compile": {
+    "prefix": [
+      "re_compile"
+    ],
+    "body": "re_compile($1)",
+    "description": "re_compile in module text"
+  },
+  "text.re_find": {
+    "prefix": [
+      "re_find"
+    ],
+    "body": "re_find($1)",
+    "description": "re_find in module text"
+  },
+  "text.re_match": {
+    "prefix": [
+      "re_match"
+    ],
+    "body": "re_match($1)",
+    "description": "re_match in module text"
+  },
+  "text.re_replace": {
+    "prefix": [
+      "re_replace"
+    ],
+    "body": "re_replace($1)",
+    "description": "re_replace in module text"
+  },
+  "text.re_split": {
+    "prefix": [
+      "re_split"
+    ],
+    "body": "re_split($1)",
+    "description": "re_split in module text"
+  },
+  "text.repeat": {
+    "prefix": [
+      "repeat"
+    ],
+    "body": "repeat($1)",
+    "description": "repeat in module text"
+  },
+  "text.replace": {
+    "prefix": [
+      "replace"
+    ],
+    "body": "replace($1)",
+    "description": "replace in module text"
+  },
+  "text.split": {
+    "prefix": [
+      "split"
+    ],
+    "body": "split($1)",
+    "description": "split in module text"
+  },
+  "text.split_after": {
+    "prefix": [
+      "split_after"
+    ],
+    "body": "split_after($1)",
+    "description": "split_after in module text"
+  },
+  "text.split_after_n": {
+    "prefix": [
+      "split_after_n"
+    ],
+    "body": "split_after_n($1)",
+    "description": "split_after_n in module text"
+  },
+  "text.split_n": {
+    "prefix": [
+      "split_n"
+    ],
+    "body": "split_n($1)",
+    "description": "split_n in module text"
+  },
+  "text.substr": {
+    "prefix": [
+      "substr"
+    ],
+    "body": "substr($1)",
+    "description": "substr in module text"
+  },
+  "text.title": {
+    "prefix": [
+      "title"
+    ],
+    "body": "title($1)",
+    "description": "title in module text"
+  },
+  "text.to_lower": {
+    "prefix": [
+      "to_lower"
+    ],
+    "body": "to_lower($1)",
+    "description": "to_lower in module text"
+  },
+  "text.to_title": {
+    "prefix": [
+      "to_title"
+    ],
+    "body": "to_title($1)",
+    "description": "to_title in module text"
+  },
+  "text.to_upper": {
+    "prefix": [
+      "to_upper"
+    ],
+    "body": "to_upper($1)",
+    "description": "to_upper in module text"
+  },
+  "text.trim": {
+    "prefix": [
+      "trim"
+    ],
+    "body": "trim($1)",
+    "description": "trim in module text"
+  },
+  "text.trim_left": {
+    "prefix": [
+      "trim_left"
+    ],
+    "body": "trim_left($1)",
+    "description": "trim_left in module text"
+  },
+  "text.trim_prefix": {
+    "prefix": [
+      "trim_prefix"
+    ],
+    "body": "trim_prefix($1)",
+    "description": "trim_prefix in module text"
+  },
+  "text.trim_right": {
+    "prefix": [
+      "trim_right"
+    ],
+    "body": "trim_right($1)",
+    "description": "trim_right in module text"
+  },
+  "text.trim_space": {
+    "prefix": [
+      "trim_space"
+    ],
+    "body": "trim_space($1)",
+    "description": "trim_space in module text"
+  },
+  "text.trim_suffix": {
+    "prefix": [
+      "trim_suffix"
+    ],
+    "body": "trim_suffix($1)",
+    "description": "trim_suffix in module text"
+  },
+  "text.unquote": {
+    "prefix": [
+      "unquote"
+    ],
+    "body": "unquote($1)",
+    "description": "unquote in module text"
+  },
+  "text:=import(\"text\")": {
+    "prefix": [
+      "text"
+    ],
+    "body": "text:=import(\"text\")",
+    "description": "import module text"
+  },
+  "time": {
+    "prefix": [
+      "time"
+    ],
+    "body": "time($1)",
+    "description": "time"
+  },
+  "times.add": {
+    "prefix": [
+      "add"
+    ],
+    "body": "add($1)",
+    "description": "add in module times"
+  },
+  "times.add_date": {
+    "prefix": [
+      "add_date"
+    ],
+    "body": "add_date($1)",
+    "description": "add_date in module times"
+  },
+  "times.after": {
+    "prefix": [
+      "after"
+    ],
+    "body": "after($1)",
+    "description": "after in module times"
+  },
+  "times.april": {
+    "prefix": [
+      "april"
+    ],
+    "body": "april",
+    "description": "april in module times"
+  },
+  "times.august": {
+    "prefix": [
+      "august"
+    ],
+    "body": "august",
+    "description": "august in module times"
+  },
+  "times.before": {
+    "prefix": [
+      "before"
+    ],
+    "body": "before($1)",
+    "description": "before in module times"
+  },
+  "times.date": {
+    "prefix": [
+      "date"
+    ],
+    "body": "date($1)",
+    "description": "date in module times"
+  },
+  "times.december": {
+    "prefix": [
+      "december"
+    ],
+    "body": "december",
+    "description": "december in module times"
+  },
+  "times.duration_hours": {
+    "prefix": [
+      "duration_hours"
+    ],
+    "body": "duration_hours($1)",
+    "description": "duration_hours in module times"
+  },
+  "times.duration_minutes": {
+    "prefix": [
+      "duration_minutes"
+    ],
+    "body": "duration_minutes($1)",
+    "description": "duration_minutes in module times"
+  },
+  "times.duration_nanoseconds": {
+    "prefix": [
+      "duration_nanoseconds"
+    ],
+    "body": "duration_nanoseconds($1)",
+    "description": "duration_nanoseconds in module times"
+  },
+  "times.duration_seconds": {
+    "prefix": [
+      "duration_seconds"
+    ],
+    "body": "duration_seconds($1)",
+    "description": "duration_seconds in module times"
+  },
+  "times.duration_string": {
+    "prefix": [
+      "duration_string"
+    ],
+    "body": "duration_string($1)",
+    "description": "duration_string in module times"
+  },
+  "times.february": {
+    "prefix": [
+      "february"
+    ],
+    "body": "february",
+    "description": "february in module times"
+  },
+  "times.format_ansic": {
+    "prefix": [
+      "format_ansic"
+    ],
+    "body": "format_ansic",
+    "description": "format_ansic in module times"
+  },
+  "times.format_kitchen": {
+    "prefix": [
+      "format_kitchen"
+    ],
+    "body": "format_kitchen",
+    "description": "format_kitchen in module times"
+  },
+  "times.format_rfc1123": {
+    "prefix": [
+      "format_rfc1123"
+    ],
+    "body": "format_rfc1123",
+    "description": "format_rfc1123 in module times"
+  },
+  "times.format_rfc1123z": {
+    "prefix": [
+      "format_rfc1123z"
+    ],
+    "body": "format_rfc1123z",
+    "description": "format_rfc1123z in module times"
+  },
+  "times.format_rfc3339": {
+    "prefix": [
+      "format_rfc3339"
+    ],
+    "body": "format_rfc3339",
+    "description": "format_rfc3339 in module times"
+  },
+  "times.format_rfc3339_nano": {
+    "prefix": [
+      "format_rfc3339_nano"
+    ],
+    "body": "format_rfc3339_nano",
+    "description": "format_rfc3339_nano in module times"
+  },
+  "times.format_rfc822": {
+    "prefix": [
+      "format_rfc822"
+    ],
+    "body": "format_rfc822",
+    "description": "format_rfc822 in module times"
+  },
+  "times.format_rfc822z": {
+    "prefix": [
+      "format_rfc822z"
+    ],
+    "body": "format_rfc822z",
+    "description": "format_rfc822z in module times"
+  },
+  "times.format_rfc850": {
+    "prefix": [
+      "format_rfc850"
+    ],
+    "body": "format_rfc850",
+    "description": "format_rfc850 in module times"
+  },
+  "times.format_ruby_date": {
+    "prefix": [
+      "format_ruby_date"
+    ],
+    "body": "format_ruby_date",
+    "description": "format_ruby_date in module times"
+  },
+  "times.format_stamp": {
+    "prefix": [
+      "format_stamp"
+    ],
+    "body": "format_stamp",
+    "description": "format_stamp in module times"
+  },
+  "times.format_stamp_micro": {
+    "prefix": [
+      "format_stamp_micro"
+    ],
+    "body": "format_stamp_micro",
+    "description": "format_stamp_micro in module times"
+  },
+  "times.format_stamp_milli": {
+    "prefix": [
+      "format_stamp_milli"
+    ],
+    "body": "format_stamp_milli",
+    "description": "format_stamp_milli in module times"
+  },
+  "times.format_stamp_nano": {
+    "prefix": [
+      "format_stamp_nano"
+    ],
+    "body": "format_stamp_nano",
+    "description": "format_stamp_nano in module times"
+  },
+  "times.format_unix_date": {
+    "prefix": [
+      "format_unix_date"
+    ],
+    "body": "format_unix_date",
+    "description": "format_unix_date in module times"
+  },
+  "times.hour": {
+    "prefix": [
+      "hour"
+    ],
+    "body": "hour",
+    "description": "hour in module times"
+  },
+  "times.is_zero": {
+    "prefix": [
+      "is_zero"
+    ],
+    "body": "is_zero($1)",
+    "description": "is_zero in module times"
+  },
+  "times.january": {
+    "prefix": [
+      "january"
+    ],
+    "body": "january",
+    "description": "january in module times"
+  },
+  "times.july": {
+    "prefix": [
+      "july"
+    ],
+    "body": "july",
+    "description": "july in module times"
+  },
+  "times.june": {
+    "prefix": [
+      "june"
+    ],
+    "body": "june",
+    "description": "june in module times"
+  },
+  "times.march": {
+    "prefix": [
+      "march"
+    ],
+    "body": "march",
+    "description": "march in module times"
+  },
+  "times.may": {
+    "prefix": [
+      "may"
+    ],
+    "body": "may",
+    "description": "may in module times"
+  },
+  "times.microsecond": {
+    "prefix": [
+      "microsecond"
+    ],
+    "body": "microsecond",
+    "description": "microsecond in module times"
+  },
+  "times.millisecond": {
+    "prefix": [
+      "millisecond"
+    ],
+    "body": "millisecond",
+    "description": "millisecond in module times"
+  },
+  "times.minute": {
+    "prefix": [
+      "minute"
+    ],
+    "body": "minute",
+    "description": "minute in module times"
+  },
+  "times.month_string": {
+    "prefix": [
+      "month_string"
+    ],
+    "body": "month_string($1)",
+    "description": "month_string in module times"
+  },
+  "times.nanosecond": {
+    "prefix": [
+      "nanosecond"
+    ],
+    "body": "nanosecond",
+    "description": "nanosecond in module times"
+  },
+  "times.november": {
+    "prefix": [
+      "november"
+    ],
+    "body": "november",
+    "description": "november in module times"
+  },
+  "times.now": {
+    "prefix": [
+      "now"
+    ],
+    "body": "now($1)",
+    "description": "now in module times"
+  },
+  "times.october": {
+    "prefix": [
+      "october"
+    ],
+    "body": "october",
+    "description": "october in module times"
+  },
+  "times.parse": {
+    "prefix": [
+      "parse"
+    ],
+    "body": "parse($1)",
+    "description": "parse in module times"
+  },
+  "times.parse_duration": {
+    "prefix": [
+      "parse_duration"
+    ],
+    "body": "parse_duration($1)",
+    "description": "parse_duration in module times"
+  },
+  "times.second": {
+    "prefix": [
+      "second"
+    ],
+    "body": "second",
+    "description": "second in module times"
+  },
+  "times.september": {
+    "prefix": [
+      "september"
+    ],
+    "body": "september",
+    "description": "september in module times"
+  },
+  "times.since": {
+    "prefix": [
+      "since"
+    ],
+    "body": "since($1)",
+    "description": "since in module times"
+  },
+  "times.sleep": {
+    "prefix": [
+      "sleep"
+    ],
+    "body": "sleep($1)",
+    "description": "sleep in module times"
+  },
+  "times.sub": {
+    "prefix": [
+      "sub"
+    ],
+    "body": "sub($1)",
+    "description": "sub in module times"
+  },
+  "times.time_day": {
+    "prefix": [
+      "time_day"
+    ],
+    "body": "time_day($1)",
+    "description": "time_day in module times"
+  },
+  "times.time_format": {
+    "prefix": [
+      "time_format"
+    ],
+    "body": "time_format($1)",
+    "description": "time_format in module times"
+  },
+  "times.time_hour": {
+    "prefix": [
+      "time_hour"
+    ],
+    "body": "time_hour($1)",
+    "description": "time_hour in module times"
+  },
+  "times.time_location": {
+    "prefix": [
+      "time_location"
+    ],
+    "body": "time_location($1)",
+    "description": "time_location in module times"
+  },
+  "times.time_minute": {
+    "prefix": [
+      "time_minute"
+    ],
+    "body": "time_minute($1)",
+    "description": "time_minute in module times"
+  },
+  "times.time_month": {
+    "prefix": [
+      "time_month"
+    ],
+    "body": "time_month($1)",
+    "description": "time_month in module times"
+  },
+  "times.time_nanosecond": {
+    "prefix": [
+      "time_nanosecond"
+    ],
+    "body": "time_nanosecond($1)",
+    "description": "time_nanosecond in module times"
+  },
+  "times.time_second": {
+    "prefix": [
+      "time_second"
+    ],
+    "body": "time_second($1)",
+    "description": "time_second in module times"
+  },
+  "times.time_string": {
+    "prefix": [
+      "time_string"
+    ],
+    "body": "time_string($1)",
+    "description": "time_string in module times"
+  },
+  "times.time_unix": {
+    "prefix": [
+      "time_unix"
+    ],
+    "body": "time_unix($1)",
+    "description": "time_unix in module times"
+  },
+  "times.time_unix_nano": {
+    "prefix": [
+      "time_unix_nano"
+    ],
+    "body": "time_unix_nano($1)",
+    "description": "time_unix_nano in module times"
+  },
+  "times.time_weekday": {
+    "prefix": [
+      "time_weekday"
+    ],
+    "body": "time_weekday($1)",
+    "description": "time_weekday in module times"
+  },
+  "times.time_year": {
+    "prefix": [
+      "time_year"
+    ],
+    "body": "time_year($1)",
+    "description": "time_year in module times"
+  },
+  "times.to_local": {
+    "prefix": [
+      "to_local"
+    ],
+    "body": "to_local($1)",
+    "description": "to_local in module times"
+  },
+  "times.to_utc": {
+    "prefix": [
+      "to_utc"
+    ],
+    "body": "to_utc($1)",
+    "description": "to_utc in module times"
+  },
+  "times.unix": {
+    "prefix": [
+      "unix"
+    ],
+    "body": "unix($1)",
+    "description": "unix in module times"
+  },
+  "times.until": {
+    "prefix": [
+      "until"
+    ],
+    "body": "until($1)",
+    "description": "until in module times"
+  },
+  "times:=import(\"times\")": {
+    "prefix": [
+      "times"
+    ],
+    "body": "times:=import(\"times\")",
+    "description": "import module times"
+  },
+  "tpl.html": {
+    "prefix": [
+      "tpl.html",
+      "html"
+    ],
+    "body": "tpl.html($1)",
+    "description": "html in module tpl"
+  },
+  "tpl.render": {
+    "prefix": [
+      "render"
+    ],
+    "body": "render(${1:object or map})"
+  },
+  "tpl.text": {
+    "prefix": [
+      "tpl.text",
+      "text"
+    ],
+    "body": "tpl.text($1)",
+    "description": "text in module tpl"
+  },
+  "tpl:=import(\"tpl\")": {
+    "prefix": [
+      "tpl"
+    ],
+    "body": "tpl:=import(\"tpl\")",
+    "description": "import module tpl"
+  },
+  "type_name": {
+    "prefix": [
+      "type_name"
+    ],
+    "body": "type_name($1)",
+    "description": "type_name"
+  }
+}

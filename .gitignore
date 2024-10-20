@@ -1,0 +1,8 @@
+/tengo-examples/cron_storage/
+.DS_Storage
+/lego/output/
+**/.DS_Store
+**/test_data/
+**/*.log
+**/testdata/
+/lego/docs/

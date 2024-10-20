@@ -1,0 +1,10 @@
+ export func(m){
+        fnTable:={}
+        fns:=[]
+        for n,f in m{
+            fnTable[n]=f
+            fns=append(fns,f)
+        }
+        fnTable["all"]=fns
+        return fnTable
+}
